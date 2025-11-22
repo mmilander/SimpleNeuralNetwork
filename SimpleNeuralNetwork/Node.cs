@@ -26,10 +26,17 @@ namespace SimpleNeuralNetwork
 
         public void CalcNode()
         {
-            foreach(var node in InputNodes)
+            foreach(var valuePair in InputNodes)
             {
-
+                var node = valuePair.Key;
+                var weight = valuePair.Value;
+                this.Result += node.Sigmoid(weight * node.Result);
+                if(double.IsNaN(this.Result) || double.IsInfinity(this.Result) || double.IsNegativeInfinity(this.Result))
+                {
+                    throw new Exception("Bad result!"); 
+                }
             }
+            Result = Result/Math.Max(1,InputNodes.Count);
         }
     }
 }

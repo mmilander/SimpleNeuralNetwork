@@ -1,4 +1,4 @@
-In the process...
+In the process... <br>
 This code so far is from a tutorial by software engineer John Dodd. <br>
 I typed it myself while following the video. <br>
 [Original tutorial](https://www.youtube.com/watch?v=GCQnhXUglgw) <br>
